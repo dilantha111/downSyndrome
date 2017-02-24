@@ -8,5 +8,22 @@
 
 
 <ion-content padding>
-  <ion-icon name="add-circle" (click) ="TakePhoto();"></ion-icon>
+  <ion-list>
+    <ion-item>      
+      <img src="assets/SampleImg/add.jpg" alt="">         
+    </ion-item>
+    <ion-item>
+      <button ion-button>Add Picture</button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="mic"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>Add description</ion-label>
+      <ion-input type="textarea"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button>Save</button>
+    </ion-item>
+  </ion-list>
 </ion-content>

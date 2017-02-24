@@ -1,3 +1,16 @@
 page-add {
-
+    ion-list{
+        ion-item{
+            img{
+                width: 20em;
+                margin:auto;
+            }
+            ion-icon{
+                font-size: 5em;
+            }
+            button{
+                text-align: center;
+            }
+        }
+    }
 }
