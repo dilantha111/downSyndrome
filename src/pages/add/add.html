@@ -13,8 +13,12 @@
       <img src="assets/SampleImg/add.jpg" alt="">         
     </ion-item>
     <ion-item>
-      <button ion-button>Add Picture</button>
+      <button ion-button (click)="takePicture()">Add Picture</button>
+      Latest Picture:
+      <img [src]="base64Image" *ngIf="base64Image" />
+      <p>{{erroString}}</p>
     </ion-item>
+    <ion-item>{{imageWork}}</ion-item>
     <ion-item>
       <ion-icon name="mic"></ion-icon>
     </ion-item>
