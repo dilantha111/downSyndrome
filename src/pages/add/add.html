@@ -1,33 +1,39 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>add</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>add</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>      
-      <img src="assets/SampleImg/add.jpg" alt="">         
-    </ion-item>
-    <ion-item>
-      <button ion-button (click)="takePicture()">Add Picture</button>
-      Latest Picture:
-      <img [src]="base64Image" *ngIf="base64Image" />
-      <p>{{erroString}}</p>
-    </ion-item>
-    <ion-item>{{imageWork}}</ion-item>
-    <ion-item>
-      <ion-icon name="mic"></ion-icon>
-    </ion-item>
-    <ion-item>
-      <ion-label>Add description</ion-label>
-      <ion-input type="textarea"></ion-input>
-    </ion-item>
-    <ion-item>
-      <button ion-button>Save</button>
-    </ion-item>
-  </ion-list>
+    <ion-list>
+        <ion-item>
+            <img src="{{base64Image}}" alt="">
+        </ion-item>
+        <ion-item>
+            <button ion-button (click)="takePicture()">Add Picture</button>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="mic" (click)="recordAudio()"></ion-icon>
+            <button ion-button (click)="stopRecording()">Stop Recording</button>
+            <button ion-button (click)="playbackRecording()">Playback Recording</button>
+        </ion-item>
+        <ion-item>
+            <input type="text" value="{{erroString}}">
+            <input type="text" value="{{result}}">
+            <ion-list>
+                <ion-item>errors : {{erroString}}</ion-item>
+                <ion-item>result : {{result}}</ion-item>
+            </ion-list>
+        </ion-item>
+        <ion-item>
+            <ion-label>Add description</ion-label>
+            <ion-input type="textarea"></ion-input>
+        </ion-item>
+        <ion-item>
+            <button ion-button>Save</button>
+        </ion-item>
+    </ion-list>
 </ion-content>
